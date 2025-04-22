@@ -1,0 +1,27 @@
+body {
+    background-color: #111111;
+    color: white;
+  }
+  
+  .card {
+    background-color: #1c1c1c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .text-primary-custom {
+    color: #f36100;
+  }
+  
+  .btn-primary-custom {
+    background-color: #f36100;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .btn-primary-custom:hover {
+    background-color: #ff7624;
+    color: white;
+  }
+  
