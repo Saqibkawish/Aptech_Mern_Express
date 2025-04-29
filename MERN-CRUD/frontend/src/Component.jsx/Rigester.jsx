@@ -26,13 +26,16 @@ export default function Rigester() {
     let  username_Regex = /^[a-zA-Z ]{3,30}$/;
     if (!name || !email || !pswd || !gender || age <=0 ){
       toast.error("ALL Fields Are Required")
+      return;
     }
 
     if (!password_Regex.test(pswd)) {
-      toast.error("Password must be at least 8 characters long, include uppercase, lowercase, number, and special character.")
+      toast.error("Password must be at least 8 characters long, include uppercase, lowercase, number, and special character.") 
+      return;
     }
     if (!username_Regex.test(name)) {
       toast.error("Username must be 3-30 characters long and contain only letters and spaces.")
+      return;
     }
 
     let userapi = await axios.post("http://localhost:3001/gym/user",{
