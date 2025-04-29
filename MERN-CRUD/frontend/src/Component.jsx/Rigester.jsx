@@ -22,6 +22,19 @@ export default function Rigester() {
   async function register_user(e){
     e.preventDefault()
    try {
+    let password_Regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    let  username_Regex = /^[a-zA-Z ]{3,30}$/;
+    if (!name || !email || !pswd || !gender || age <=0 ){
+      toast.error("ALL Fields Are Required")
+    }
+
+    if (!password_Regex.test(pswd)) {
+      toast.error("Password must be at least 8 characters long, include uppercase, lowercase, number, and special character.")
+    }
+    if (!username_Regex.test(name)) {
+      toast.error("Username must be 3-30 characters long and contain only letters and spaces.")
+    }
+
     let userapi = await axios.post("http://localhost:3001/gym/user",{
       name:name,
       email:email,
