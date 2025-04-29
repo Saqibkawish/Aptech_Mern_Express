@@ -1,104 +1,56 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
+import Register from '../Components/Register'
+
 export default function Navbar() {
   return (
     <div>
-    
+  
 
-    <div className="offcanvas-menu-overlay"></div>
-    <div className="offcanvas-menu-wrapper">
-        <div className="canvas-close">
-            <i className="fa fa-close"></i>
-        </div>
-        <div className="canvas-search search-switch">
-            <i className="fa fa-search"></i>
-        </div>
-        <nav className="canvas-menu mobile-menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><Link to="reg">ARegistration</Link></li>
-                <li><a href="./classNamees.html">classNamees</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="./team.html">Our Team</a></li>
-                <li><a href="#">Pages</a>
-                    <ul className="dropdown">
-                        <li><a href="./about-us.html">About us</a></li>
-                        <li><a href="./className-timetable.html">classNamees timetable</a></li>
-                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                        <li><a href="./team.html">Our team</a></li>
-                        <li><a href="./gallery.html">Gallery</a></li>
-                        <li><a href="./blog.html">Our blog</a></li>
-                        <li><a href="./404.html">404</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div className="canvas-social">
-            <a href="#"><i className="fa fa-facebook"></i></a>
-            <a href="#"><i className="fa fa-twitter"></i></a>
-            <a href="#"><i className="fa fa-youtube-play"></i></a>
-            <a href="#"><i className="fa fa-instagram"></i></a>
-        </div>
-    </div>
-    <header className="header-section">
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-3">
-                    <div className="logo">
-                        <a href="./index.html">
-                            <img src="img/logo.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <nav className="nav-menu">
-                        <ul>
-                            <li className="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./className-details.html">classNamees</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./team.html">Our Team</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul className="dropdown">
-                                    <li><a href="./about-us.html">About us</a></li>
-                                    <li><a href="./className-timetable.html">classNamees timetable</a></li>
-                                    <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                                    <li><a href="./team.html">Our team</a></li>
-                                    <li><a href="./gallery.html">Gallery</a></li>
-                                    <li><a href="./blog.html">Our blog</a></li>
-                                    <li><a href="./404.html">404</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="col-lg-3">
-                    <div className="top-option">
-                        <div className="to-search search-switch">
-                            <i className="fa fa-search"></i>
-                        </div>
-                        <div className="to-social">
-                            <a href="#"><i className="fa fa-facebook"></i></a>
-                            <a href="#"><i className="fa fa-twitter"></i></a>
-                            <a href="#"><i className="fa fa-youtube-play"></i></a>
-                            <a href="#"><i className="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
+      {/* // Header Section Begin */}
+      <header class="header-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="logo">
+                <a href="./index.html">
+                  <img src="img/logo.png" alt="" />
+                </a>
+              </div>
             </div>
-            <div className="canvas-open">
-                <i className="fa fa-bars"></i>
+            <div class="col-lg-6">
+              <nav class="nav-menu">
+                <ul>
+                  <li class="active"><a href="./index.html">Home</a></li>
+                  <li><a href="./about-us.html">About Us</a></li>
+                  <li><a href="./class-details.html">Classes</a></li>
+                  <li><a href="./services.html">Services</a></li>
+                  <li><a href="./team.html">Our Team</a></li>
+                  <Link to="/register">Register</Link>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+              </nav>
             </div>
+            <div class="col-lg-3">
+              <div class="top-option">
+                <div class="to-search search-switch">
+                  <i class="fa fa-search"></i>
+                </div>
+                <div class="to-social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-youtube-play"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="canvas-open">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
-    </header>
-    
-
-    
-    
-    
+      </header>
+      {/* // Header End */}
     </div>
   )
 }
