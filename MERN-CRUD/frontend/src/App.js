@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-
+import "bootstrap-icons/font/bootstrap-icons.css"
 import "bootstrap/dist/css/bootstrap.css";
 import Main from './Component.jsx/Main';
 import Rigester from './Component.jsx/Rigester';

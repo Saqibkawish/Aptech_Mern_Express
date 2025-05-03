@@ -26,6 +26,21 @@ let b = require("bcrypt")
             res.status(501).json({msg:error.message});
             
         }
+    },
+
+    delete_user : async function(req,res){
+        try {
+            let {id} = req.params
+            let find_id = await user.findById(id)
+            if (find_id) {
+                await user.findByIdAndDelete(find_id)
+                return res.status(200).json({msg : "User Deleted Successfully"})
+                
+            }
+        } catch (error) {
+            res.status(501).json({msg:error.message});
+            
+        }
     }
  }
  module.exports=user_function;
