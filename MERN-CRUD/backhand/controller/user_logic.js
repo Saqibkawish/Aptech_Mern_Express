@@ -17,6 +17,15 @@ let b = require("bcrypt")
     }  catch(error){
                 res.status(501).json({msg:error.message});
         }
+    },
+    get_all_user : async function(req,res){
+        try {
+            let user_record = await user.find().select("-password").sort({"record_at" : -1});
+            return res.status(200).json(user_record)
+        } catch (error) {
+            res.status(501).json({msg:error.message});
+            
+        }
     }
  }
  module.exports=user_function;
