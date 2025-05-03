@@ -22,7 +22,7 @@ export default function Show_data() {
 
   return (
     <div className="container">
-    <h1>Show_data</h1>
+    <h1>User Records</h1>
     <div className="row">
         {user.length === 0 ? 
         (
