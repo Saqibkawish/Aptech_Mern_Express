@@ -57,7 +57,7 @@ let b = require("bcrypt")
                     gender : gender 
                 }
 
-                await user.findByIdandUpdate(id , updaterecord)
+                await user.findByIdAndUpdate(id , updaterecord)
                 return res.status(200).json({msg : "User Update Successfully"})
                 
             }

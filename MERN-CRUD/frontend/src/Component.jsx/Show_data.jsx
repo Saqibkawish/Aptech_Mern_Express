@@ -48,6 +48,23 @@ export default function Show_data() {
         setG(d);
         setId(e);
     }
+    async function update_function(){
+        try {
+            await axios.put(`http://localhost:3001/gym/getuser/${id}`,{
+                name : na,
+                email : e,
+                age : age ,
+                gender : g
+            }).then((a)=>{
+                dataaya();
+                toast.success(a.data.msg)
+                document.querySelector(".kuchbhi").click();
+            })
+        } catch (error) {
+            toast.error(error.response.data.msg)
+            
+        }
+    }
   return (
     <div className="container">
         <ToastContainer/>
@@ -89,8 +106,8 @@ export default function Show_data() {
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" >Edit</button>
+        <button type="button" class="btn btn-secondary kuchbhi" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  onClick={update_function}>Edit</button>
       </div>
     </div>
   </div>
